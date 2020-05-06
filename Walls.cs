@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Snake
+namespace Snake_Janika
 {
     class Walls
     {
@@ -14,7 +14,7 @@ namespace Snake
             // Отрисовка рамочки
             HorizontalLine upLine = new HorizontalLine(0, mapWidth - 2, 0, '-');
             HorizontalLine downLine = new HorizontalLine(0, mapWidth - 2, mapHeight - 1, '-');
-            VerticalLine leftLine = new VerticalLine(0, mapHeight - 1, 0, '|');
+            VerticalLine leftLine = new VerticalLine(0, mapHeight - 1, 0, '+');
             VerticalLine rightLine = new VerticalLine(0, mapHeight - 1, mapWidth - 2, '|');
 
             wallList.Add(upLine);

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Snake
+
+namespace Snake_Janika
 {
     class Point
     {
@@ -57,7 +58,24 @@ namespace Snake
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
-
+        private static ConsoleColor GetRandomConsoleColor()
+        {
+            Random _random = new Random();
+            var consoleColors = Enum.GetValues(typeof(ConsoleColor));
+            return (ConsoleColor)consoleColors.GetValue(_random.Next(consoleColors.Length));
+        }
+        public void FoodDraw()
+        {
+            Console.ForegroundColor = GetRandomConsoleColor();
+            Console.SetCursorPosition(x, y);
+            Console.Write(sym);
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+        public void FoodClear()
+        {
+            sym = ' ';
+            Draw();
+        }
         public void Clear()
         {
             sym = ' ';

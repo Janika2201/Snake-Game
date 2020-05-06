@@ -8,8 +8,8 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Snake_Janika
 {
-    class GameOver
-    {
+	class GameOver
+	{
 		public GameOver()
 		{
 
@@ -22,7 +22,7 @@ namespace Snake_Janika
 			int xOffset = 40;
 			int yOffset = 8;
 
-			Console.ForegroundColor = ConsoleColor.Red;
+			Console.ForegroundColor = ConsoleColor.Black;
 			Console.SetCursorPosition(xOffset, yOffset++);
 			text.WriteText("============================", xOffset, yOffset++);
 			text.WriteText("И Г Р А    О К О Н Ч Е Н А", xOffset + 1, yOffset++);
