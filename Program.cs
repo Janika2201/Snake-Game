@@ -26,19 +26,7 @@ namespace Snake_Janika
 					Console.Clear();
 					Console.WriteLine("Имя должно быть больше 6 символа.");
 					continue;
-				}
-				else if (name.Length > 10)
-				{
-					Console.Clear();
-					Console.WriteLine("Имя не должно быть больше 10 символов.");
-					continue;
-				}
-				else
-				{
-					Console.Clear();
-					break;
-				}
-			}
+				}	
 
 			Sounds music = new Sounds();
 			music.MainMusic();
