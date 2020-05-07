@@ -16,7 +16,7 @@ namespace Snake_Janika
         public void to_file(string x, int y, int s)
         {
             StreamWriter to_file = new StreamWriter(@"C:\Users\Lenovo\Desktop\Snake\Users.txt", true);
-            to_file.WriteLine("Имя:" + x + " Твои очки:" + y + " Длина змеи:" + s);
+            to_file.WriteLine("Имя:" + x + " Очки:" + y + " Длина змеи:" + s);
             to_file.Close();
         }
 
@@ -28,7 +28,7 @@ namespace Snake_Janika
             from_file.Close();
         }
 
-        internal void to_file(string name, int o4ki)
+        internal void to_file(string name, int bal)
         {
             throw new NotImplementedException();
         }

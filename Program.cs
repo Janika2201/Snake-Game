@@ -27,12 +27,6 @@ namespace Snake_Janika
 					Console.WriteLine("Имя должно быть больше 6 символа.");
 					continue;
 				}
-				else if (name.Length > 10)
-				{
-					Console.Clear();
-					Console.WriteLine("Имя не должно быть больше 10 символов.");
-					continue;
-				}
 				else
 				{
 					Console.Clear();
@@ -63,9 +57,9 @@ namespace Snake_Janika
 			int size = 2;
 			text.WriteText("Длина змеи:" + size, xOffsetO4ki - 35, yOffsetO4ki);
 
-			int o4ki = 0;
-			text.WriteText("Очки:" + o4ki, xOffsetO4ki, yOffsetO4ki);
-
+			int bal = 0;
+			text.WriteText("Очки:" + bal, xOffsetO4ki, yOffsetO4ki);
+			
 			Stopwatch stopWatch = new Stopwatch();
 			stopWatch.Start(); 
 
@@ -85,9 +79,9 @@ namespace Snake_Janika
 					FoodCreator food1 = new FoodCreator(100, 24);
 					food = food1.CreateFood();
 					food.FoodDraw();
-					o4ki++;
+					bal++;
 					Console.SetCursorPosition(xOffsetO4ki, yOffsetO4ki);
-					text.WriteText("Очки:" + o4ki, xOffsetO4ki, yOffsetO4ki);
+					text.WriteText("Очки:" + bal, xOffsetO4ki, yOffsetO4ki);
 					size++;
 					Console.SetCursorPosition(xOffsetO4ki, yOffsetO4ki);
 					text.WriteText("Длина змеи:" + size, xOffsetO4ki - 35, yOffsetO4ki);
@@ -107,10 +101,10 @@ namespace Snake_Janika
 			music.GameOver();
 
 			GameOver game = new GameOver();
-			game.WriteGameOver(o4ki);
+			game.WriteGameOver(bal);
 
 			Save saveFiles = new Save();
-			saveFiles.to_file(name, o4ki);
+			saveFiles.to_file(name, bal);
 
 			ConsoleKeyInfo knop = Console.ReadKey();
 			if (knop.Key == ConsoleKey.R)
