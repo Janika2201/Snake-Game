@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +26,6 @@ namespace Snake_Janika
 					Console.Clear();
 					Console.WriteLine("Имя должно быть больше 6 символа.");
 					continue;
-<<<<<<< HEAD
 				}
 				else
 				{
@@ -34,9 +33,8 @@ namespace Snake_Janika
 					break;
 				}
 			}
-=======
+
 				}	
->>>>>>> e14fe4797cbf932016895df1054922437adb8388
 
 			Sounds music = new Sounds();
 			music.MainMusic();
